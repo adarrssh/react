@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import './App.css';
+import Navbar from './useCallBack/Navbar'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar adjective={"hey"} getAdjective={getAdjective}/>
       <h1>hey</h1>
       <h4>{count}</h4>
       <button onClick={()=>setCount(count+1)}>click</button>
