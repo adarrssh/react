@@ -11,6 +11,9 @@ function App() {
     return "another"
   },[])
 
+  // const increment = useCallback(() => {
+  //   setCount((prevCount) => prevCount + incrementBy);
+  // }, [incrementBy]);
   
 
   return (
@@ -19,6 +22,7 @@ function App() {
       <h1>hey</h1>
       <h4>{count}</h4>
       <button onClick={()=>setCount(count+1)}>click</button>
+
     </div>
   );
 }

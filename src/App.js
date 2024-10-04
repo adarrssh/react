@@ -1,24 +1,17 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import './App.css';
+import React, { useCallback, useState } from 'react';
+import Form from './Form'
+const SimpleDropdown = () => {
+  const [selectedOption, setSelectedOption] = useState('');
 
-function App() {
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
-  const [count,setCount] = useState(0)
-  const [adjective,setAdejctive] = useState(0)
-  
-  const getAdjective = useCallback(() =>{
-    return "another"
-  },[])
-
-  
 
   return (
-    <div className="App">
-      <h1>hey</h1>
-      <h4>{count}</h4>
-      <button onClick={()=>setCount(count+1)}>click</button>
-    </div>
+    
+    <Form/>
   );
-}
+};
 
-export default App;
+export default SimpleDropdown;
